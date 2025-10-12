@@ -1,13 +1,13 @@
-# JobFlow Pro: ATS for Candidates
+# ATS for Candidates
 *CS 490 Capstone Project - Fall 2025*
 
 ## Executive Summary
 
-**JobFlow Pro** is a revolutionary Applicant Tracking System designed specifically for job candidates - flipping the traditional employer-centric ATS model to empower job seekers with the same sophisticated tools that employers use to manage their hiring process. Our comprehensive platform leverages AI-powered automation to transform the job search experience, enabling candidates to take control of their career journey with intelligent application management, personalized content generation, and data-driven insights.
+This project creates an Applicant Tracking System designed specifically for job candidates, flipping the traditional employer-centric ATS model to empower job seekers with the same tools that employers use to manage their hiring process. The platform leverages AI-powered automation to streamline the job search experience, enabling candidates to take control of their career journey with intelligent application management, personalized content generation, and data-driven insights.
 
 ## Business Concept
 
-As a capstone project presented in a business startup format, JobFlow Pro addresses the critical gap in the job search market where candidates lack the organizational tools and intelligence that employers take for granted. Our platform democratizes access to professional-grade career management technology, creating a new category of candidate-centric career software.
+As a capstone project presented in a business startup format, this ATS for candidates addresses the gap in the job search market where candidates lack the organizational tools and intelligence that employers take for granted. The platform democratizes access to professional-grade career management technology, creating a new category of candidate-centric career software.
 
 ### Market Opportunity
 - **$4.5B** global job board market size (2024)
@@ -91,7 +91,7 @@ Transform chaotic job searching into a strategic, organized, and data-driven pro
 - **CI/CD Pipeline**: Automated testing and deployment workflows
 
 ### 🎨 **Branding & User Experience**
-- **Professional Brand Identity**: Logo, color scheme, typography system
+- **Custom Brand Identity**: Team-developed logo, color scheme, typography system
 - **Responsive Web Application**: Mobile-first design approach
 - **Accessibility Compliance**: WCAG 2.1 AA standards
 - **User Onboarding**: Interactive tutorials and guided setup
@@ -99,12 +99,34 @@ Transform chaotic job searching into a strategic, organized, and data-driven pro
 
 ## Development Methodology
 
-### **Agile Sprint Structure**
-- **Sprint 1-2**: Authentication, user profiles, basic job entry
-- **Sprint 3-4**: Resume/cover letter generation, application tracking
-- **Sprint 5-6**: Interview preparation tools, analytics dashboard
-- **Sprint 7-8**: Multi-user features, advanced AI capabilities
-- **Sprint 9-10**: Cloud deployment, performance optimization, testing
+### **Agile Sprint Structure (4 Sprints)**
+- **Sprint 1 (Weeks 1-4)**: Foundation & Core Infrastructure
+  - Authentication system and user management
+  - Database design and API architecture
+  - Basic user profiles and document upload
+  - Brand identity and design system
+  - Initial job entry and tracking system
+
+- **Sprint 2 (Weeks 5-8)**: AI-Powered Content & Application Management
+  - Resume and cover letter generation AI
+  - Advanced job application tracking pipeline
+  - Company research and job matching algorithms
+  - Multi-user collaboration features
+  - Analytics dashboard foundation
+
+- **Sprint 3 (Weeks 9-12)**: Interview Tools & Advanced Features
+  - Interview preparation suite and mock practice
+  - Network relationship management
+  - Advanced analytics and performance insights
+  - Mobile responsiveness and accessibility
+  - Integration with external APIs (LinkedIn, job boards)
+
+- **Sprint 4 (Weeks 13-16)**: Deployment & Optimization
+  - Cloud deployment and production environment
+  - Performance optimization and scaling
+  - Comprehensive testing suite implementation
+  - Security auditing and compliance
+  - Beta testing and user feedback integration
 
 ### **Technology Stack**
 - **Frontend**: React.js with TypeScript, Material-UI/Chakra UI
@@ -202,6 +224,6 @@ Transform chaotic job searching into a strategic, organized, and data-driven pro
 
 ## Conclusion
 
-JobFlow Pro represents a significant opportunity to revolutionize the job search experience by placing powerful, AI-driven tools directly in the hands of candidates. By building a comprehensive, candidate-centric ATS platform, this capstone project demonstrates the potential to create meaningful technological solutions that address real-world career challenges while showcasing advanced software development skills and business acumen.
+This ATS for candidates represents an opportunity to improve the job search experience by placing powerful, AI-driven tools directly in the hands of candidates. By building a comprehensive, candidate-centric ATS platform, this capstone project demonstrates the potential to create meaningful technological solutions that address real-world career challenges while showcasing advanced software development skills and business acumen.
 
 The platform's success will be measured not only by technical excellence and code quality but also by its ability to genuinely improve job search outcomes for users, making it a compelling portfolio piece that demonstrates both technical capability and market understanding.

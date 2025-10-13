@@ -41,7 +41,6 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 - Invalid credentials display error message "Invalid email or password"
 - Login form cleared after failed attempt
 - User session persists across browser tabs
-- "Remember me" checkbox maintains login for 30 days
 
 **Frontend Verification**: Navigate to /login, enter valid/invalid credentials, verify appropriate responses
 
@@ -62,18 +61,17 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-004: OAuth Integration with LinkedIn
-**Summary**: As a user, I want to log in using my LinkedIn account so I can quickly access the platform and import my professional information.
+#### UC-004: OAuth Integration with other provider (LinkedIn, GitHub, Apple, Microsoft, etc)
+**Summary**: As a user, I want to log in using my existing account so I can quickly access the platform and import my professional information.
 
 **Acceptance Criteria**:
-- "Sign in with LinkedIn" button visible on login and registration pages
-- Clicking button opens LinkedIn OAuth consent screen
-- Successful LinkedIn authentication creates new account if email doesn't exist
-- Successful LinkedIn authentication logs in existing user if email exists
-- User profile populated with LinkedIn information (name, email, headline, profile picture)
-- Basic work experience imported if available through API
+- "Sign in with [provider]" button visible on login and registration pages
+- Clicking button opens the provider's OAuth consent screen
+- Successful authentication creates new account if email doesn't exist
+- Successful authentication logs in existing user if email exists
+- User profile populated with provider's information (name, email, headline, profile picture)
 
-**Frontend Verification**: Click "Sign in with LinkedIn", complete OAuth flow, verify profile data import
+**Frontend Verification**: Click "Sign in with [provider]", complete OAuth flow, verify profile data import
 
 ---
 
@@ -169,7 +167,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-### 🗄️ Database Design and API Architecture (8 Use Cases)
+### 🗄️ Database Design and API Architecture (3 Use Cases)
 
 #### UC-011: User Data Persistence
 **Summary**: As a developer, I want user registration data to be properly stored so user accounts persist across sessions.
@@ -181,7 +179,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 - Created_at and updated_at timestamps automatically maintained
 - User IDs are UUID format for security
 - Database constraints prevent duplicate emails
-- Soft delete functionality preserves data integrity
+- Profile data properly linked to user accounts
 
 **Frontend Verification**: Register user, log out, log back in, verify data persistence
 
@@ -196,63 +194,15 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 - POST /api/auth/register creates new user account
 - POST /api/auth/login authenticates user
 - POST /api/auth/logout ends user session
+- Profile section endpoints (employment, skills, education, projects)
 - All endpoints return consistent JSON response format
 - Proper HTTP status codes used (200, 201, 400, 401, 500)
-- API documentation available at /api/docs
 
 **Frontend Verification**: Use browser dev tools to verify API responses and status codes
 
 ---
 
-#### UC-013: Database Schema Validation
-**Summary**: As a developer, I want database constraints to prevent invalid data so the system maintains data integrity.
-
-**Acceptance Criteria**:
-- Email field has unique constraint
-- Required fields have NOT NULL constraints
-- Email field validates email format at database level
-- Password field has minimum length constraint
-- Foreign key relationships properly established
-- Database migrations can be rolled back safely
-- Schema documentation automatically generated
-
-**Frontend Verification**: Attempt to register with duplicate email, verify error handling
-
----
-
-#### UC-014: API Authentication Middleware
-**Summary**: As a developer, I want protected API endpoints to require authentication so unauthorized access is prevented.
-
-**Acceptance Criteria**:
-- JWT tokens used for API authentication
-- Protected endpoints return 401 for missing tokens
-- Protected endpoints return 401 for invalid tokens
-- Token expiration properly handled
-- Refresh token mechanism implemented
-- Rate limiting applied to authentication endpoints
-- CORS properly configured for frontend domain
-
-**Frontend Verification**: Use dev tools to inspect API calls, verify 401 responses for protected endpoints
-
----
-
-#### UC-015: Database Connection Management
-**Summary**: As a system administrator, I want database connections to be properly managed so the system performs reliably under load.
-
-**Acceptance Criteria**:
-- Connection pooling configured with appropriate limits
-- Database connections automatically retry on failure
-- Graceful handling of database timeouts
-- Connection health checks implemented
-- Database connection metrics logged
-- Environment-specific connection strings
-- SSL/TLS encryption for database connections
-
-**Frontend Verification**: Monitor application during extended use, verify no connection errors
-
----
-
-#### UC-016: API Error Handling
+#### UC-013: API Error Handling
 **Summary**: As a frontend developer, I want consistent error responses from APIs so I can provide appropriate user feedback.
 
 **Acceptance Criteria**:
@@ -260,47 +210,15 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 - Error responses include error code and user-friendly message
 - Validation errors list specific field issues
 - 500 errors logged server-side but return generic message
-- Request IDs included for debugging purposes
-- Error responses include appropriate HTTP status codes
-- CORS headers included in error responses
+- Duplicate email registration shows appropriate error
+- Form validation errors displayed clearly to users
+- Network errors handled gracefully with retry options
 
 **Frontend Verification**: Trigger various API errors, verify consistent error message format
 
 ---
 
-#### UC-017: Database Backup and Recovery
-**Summary**: As a system administrator, I want automated database backups so data can be recovered in case of failure.
-
-**Acceptance Criteria**:
-- Daily automated backups scheduled
-- Backup files stored in secure, separate location
-- Point-in-time recovery capability available
-- Backup restoration process documented and tested
-- Backup integrity verification automated
-- Retention policy removes old backups after 30 days
-- Backup monitoring and alerting configured
-
-**Frontend Verification**: Verify application continues functioning normally during backup windows
-
----
-
-#### UC-018: API Performance Monitoring
-**Summary**: As a developer, I want API response times monitored so performance issues can be identified quickly.
-
-**Acceptance Criteria**:
-- Response time metrics collected for all endpoints
-- Slow query detection and logging implemented
-- API endpoint usage statistics tracked
-- Performance alerts configured for response time thresholds
-- Database query performance monitoring enabled
-- API rate limiting prevents abuse
-- Metrics dashboard accessible to development team
-
-**Frontend Verification**: Monitor network tab during API calls, verify reasonable response times
-
----
-
-### 🎨 Brand Identity and Design System (9 Use Cases)
+### 🎨 Brand Identity and Design System (8 Use Cases)
 
 #### UC-019: Logo and Brand Assets Creation
 **Summary**: As a user, I want to see a professional logo and consistent branding so I trust the platform's credibility.
@@ -430,25 +348,9 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-027: Style Guide Documentation
-**Summary**: As a developer, I want comprehensive style guide documentation so I can implement consistent design throughout the application.
+### 👤 Profile Management System (14 Use Cases)
 
-**Acceptance Criteria**:
-- Style guide page accessible within application
-- All colors documented with hex codes and usage
-- Typography examples and CSS classes listed
-- Button variants and states demonstrated
-- Form component examples provided
-- Icon usage guidelines included
-- Spacing and layout guidelines documented
-
-**Frontend Verification**: Access style guide page, verify all components are documented and functional
-
----
-
-### 👤 Basic User Profiles and Document Upload (8 Use Cases)
-
-#### UC-028: Profile Information Form
+#### UC-027: Basic Profile Information Form
 **Summary**: As a user, I want to enter my basic profile information so I can create a complete professional profile.
 
 **Acceptance Criteria**:
@@ -465,7 +367,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-029: Profile Picture Upload
+#### UC-028: Profile Picture Upload
 **Summary**: As a user, I want to upload a profile picture so my profile appears professional and personalized.
 
 **Acceptance Criteria**:
@@ -482,111 +384,213 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-030: Resume Document Upload
-**Summary**: As a user, I want to upload my resume so the system can parse my information and help generate tailored versions.
+#### UC-029: Employment History - Add Entry
+**Summary**: As a user, I want to add employment history entries so I can showcase my work experience.
 
 **Acceptance Criteria**:
-- File upload accepts PDF, DOC, DOCX formats
-- Maximum file size of 10MB
-- Upload progress indicator shown
-- Document preview/download available after upload
-- Replace document option available
-- File name displayed with upload date
-- Error handling for unsupported formats
-- Upload status messages (success, error, processing)
+- Add employment form includes: job title, company name, location, start date, end date
+- "Current position" checkbox that removes end date requirement
+- Job description text area (1000 character limit)
+- Form validation for required fields (title, company, start date)
+- Success message upon saving entry
+- Form clears after successful submission
+- Cancel button returns to employment history view
+- Date validation ensures start date is before end date
 
-**Frontend Verification**: Upload different document formats, verify preview and download functionality
+**Frontend Verification**: Navigate to employment section, add new job entry, verify data saves and displays
 
 ---
 
-#### UC-031: Cover Letter Template Upload
-**Summary**: As a user, I want to upload my base cover letter template so the system can customize it for specific applications.
+#### UC-030: Employment History - View and Edit
+**Summary**: As a user, I want to view and edit my employment history so I can keep my work experience current.
 
 **Acceptance Criteria**:
-- Separate upload area for cover letter documents
-- Same file format support as resume (PDF, DOC, DOCX)
-- Template preview functionality
-- Multiple cover letter templates supported
-- Template naming/labeling capability
-- Version history tracking
-- Default template designation option
-- Download original template functionality
+- Employment history displayed in reverse chronological order
+- Each entry shows: title, company, dates, location
+- Edit button on each entry opens edit form
+- Edit form pre-populated with existing data
+- Save changes updates the entry
+- Cancel editing returns to view mode without changes
+- Visual indication of current vs. past positions
+- Timeline view shows career progression
 
-**Frontend Verification**: Upload cover letter template, verify naming and preview features
+**Frontend Verification**: View employment history, edit an entry, verify changes are saved and displayed
 
 ---
 
-#### UC-032: Portfolio Document Management
-**Summary**: As a user, I want to upload portfolio documents and work samples so I can showcase my skills to potential employers.
+#### UC-031: Employment History - Delete Entry
+**Summary**: As a user, I want to delete employment entries so I can remove outdated or incorrect information.
 
 **Acceptance Criteria**:
-- Support for multiple file types (PDF, images, documents)
-- Folder/category organization for different types of work
-- Document descriptions and tags
-- Public/private visibility settings for each document
-- Drag-and-drop upload interface
-- Bulk upload capability
-- Document search and filtering
-- Portfolio summary view with thumbnails
+- Delete button/icon on each employment entry
+- Confirmation dialog before deletion ("Are you sure?")
+- Successful deletion removes entry from list
+- Cancel option in confirmation dialog
+- Deleted entries cannot be recovered (permanent deletion)
+- Success message after deletion
+- List updates immediately after deletion
+- No delete option if only one entry exists
 
-**Frontend Verification**: Upload various portfolio items, organize into categories, verify visibility settings
+**Frontend Verification**: Delete an employment entry, verify confirmation dialog and removal from list
 
 ---
 
-#### UC-033: Skills and Endorsements Section
-**Summary**: As a user, I want to list my skills and proficiency levels so employers can quickly assess my capabilities.
+#### UC-032: Skills - Add and Manage Skills
+**Summary**: As a user, I want to add and manage my skills so employers can assess my capabilities.
 
 **Acceptance Criteria**:
-- Add/remove skills with autocomplete from common skills database
-- Proficiency level selection (Beginner, Intermediate, Advanced, Expert)
-- Skill categories (Technical, Soft Skills, Languages, etc.)
-- Visual indicators for skill levels (progress bars, stars)
-- Skill search and filtering
-- Suggested skills based on profile information
-- Skill validation through uploaded documents
-- Export skills list functionality
+- Add skill form with skill name and proficiency level
+- Proficiency levels: Beginner, Intermediate, Advanced, Expert
+- Skill categories: Technical, Soft Skills, Languages, Industry-Specific
+- Autocomplete suggestions for common skills
+- Duplicate skill prevention
+- Visual display with skill tags/badges
+- Ability to edit skill proficiency levels
+- Remove skill functionality with confirmation
 
-**Frontend Verification**: Add various skills, set proficiency levels, verify visual display and categorization
+**Frontend Verification**: Add various skills with different proficiency levels, verify display and management
 
 ---
 
-#### UC-034: Education and Certification Tracking
-**Summary**: As a user, I want to record my educational background and certifications so my qualifications are properly documented.
+#### UC-033: Skills - Category Organization
+**Summary**: As a user, I want to organize my skills by category so they are easier to review and understand.
 
 **Acceptance Criteria**:
-- Education entries: school name, degree, field of study, graduation date
-- GPA field (optional) with privacy settings
-- Certification entries: name, issuing organization, date earned, expiration
-- Upload capability for degree/certification documents
-- Verification status indicators
-- Timeline view of education history
-- Search functionality for schools and certifications
-- LinkedIn import option for education data
+- Skills grouped by category in profile view
+- Drag-and-drop to reorder skills within categories
+- Visual distinction between skill categories
+- Category headers with skill counts
+- Ability to move skills between categories
+- Search/filter skills within categories
+- Export skills list by category
+- Category-based skill level summaries
 
-**Frontend Verification**: Add education and certification entries, upload supporting documents, verify timeline display
+**Frontend Verification**: Organize skills into categories, verify grouping and reordering functionality
 
 ---
 
-#### UC-035: Profile Completeness Indicator
-**Summary**: As a user, I want to see my profile completion status so I know what information is still needed for a complete profile.
+#### UC-034: Education - Add Educational Background
+**Summary**: As a user, I want to add my educational background so my qualifications are properly documented.
 
 **Acceptance Criteria**:
-- Progress bar or percentage showing profile completeness
-- Checklist of required and optional profile sections
-- Visual indicators for completed vs. incomplete sections
-- Suggestions for improving profile completeness
-- Quick links to incomplete sections
-- Profile strength rating (weak, good, strong, excellent)
-- Recommendations for profile optimization
-- Completion rewards or achievements
+- Education form includes: institution name, degree type, field of study, graduation date
+- GPA field (optional) with privacy toggle
+- "Currently enrolled" option for ongoing education
+- Education level dropdown (High School, Associate, Bachelor's, Master's, PhD, etc.)
+- Form validation for required fields
+- Multiple education entries supported
+- Achievements/honors text field
+- Save and cancel functionality
 
-**Frontend Verification**: View profile with various completion levels, verify progress indicators and suggestions
+**Frontend Verification**: Add education entries, verify data saves and displays correctly
+
+---
+
+#### UC-035: Education - View and Edit Entries
+**Summary**: As a user, I want to view and edit my education entries so I can keep my academic background current.
+
+**Acceptance Criteria**:
+- Education displayed in reverse chronological order
+- Each entry shows: degree, institution, dates, field of study
+- Edit functionality for each entry
+- GPA visibility based on privacy settings
+- Visual distinction between completed and ongoing education
+- Timeline view of educational progression
+- Delete functionality with confirmation
+- Honors/achievements displayed prominently
+
+**Frontend Verification**: View and edit education entries, verify privacy settings and timeline display
+
+---
+
+#### UC-036: Certifications - Add and Manage
+**Summary**: As a user, I want to add and manage my certifications so I can highlight my professional qualifications.
+
+**Acceptance Criteria**:
+- Certification form includes: name, issuing organization, date earned, expiration date
+- "Does not expire" option for permanent certifications
+- Certification number/ID field
+- Upload capability for certification documents
+- Verification status indicator
+- Renewal reminder functionality
+- Search functionality for organizations
+- Industry-specific certification categories
+
+**Frontend Verification**: Add certifications, verify expiration tracking and document upload
+
+---
+
+#### UC-037: Special Projects - Add Project Entries
+**Summary**: As a user, I want to add special projects so I can showcase significant work beyond regular employment.
+
+**Acceptance Criteria**:
+- Project form includes: project name, description, role, start/end dates
+- Technologies/skills used in the project
+- Project URL or repository link (optional)
+- Team size and collaboration details
+- Project outcomes and achievements
+- Industry or project type categorization
+- Media upload for project screenshots
+- Status indicator (Completed, Ongoing, Planned)
+
+**Frontend Verification**: Add project entries, verify all fields save correctly and display properly
+
+---
+
+#### UC-038: Special Projects - Portfolio View
+**Summary**: As a user, I want to view my projects in a portfolio format so I can effectively showcase my work.
+
+**Acceptance Criteria**:
+- Grid or card layout for project display
+- Project thumbnails with key information
+- Filter projects by technology, industry, or date
+- Sort projects by date, relevance, or custom order
+- Detailed project view with full description
+- Share individual projects via URL
+- Print-friendly project summaries
+- Project search functionality
+
+**Frontend Verification**: View projects in portfolio format, verify filtering and detailed views
+
+---
+
+#### UC-039: Profile Overview Dashboard
+**Summary**: As a user, I want a dashboard overview of my complete profile so I can see all information at a glance.
+
+**Acceptance Criteria**:
+- Summary cards for each profile section (Employment, Skills, Education, Projects)
+- Recent activity timeline
+- Profile completion percentage and suggestions
+- Quick-add buttons for each section
+- Visual charts for skills distribution
+- Career timeline visualization
+- Export profile summary functionality
+- Profile strength indicators and recommendations
+
+**Frontend Verification**: View profile dashboard, verify all sections are represented and interactive
+
+---
+
+#### UC-040: Profile Completeness and Validation
+**Summary**: As a user, I want guidance on profile completeness so I know how to improve my professional presentation.
+
+**Acceptance Criteria**:
+- Progress bar showing overall profile completeness
+- Section-specific completion indicators
+- Required vs. optional field indicators
+- Suggestions for profile improvement
+- Profile strength scoring (1-100)
+- Comparison to industry standards
+- Achievement badges for profile milestones
+- Tips and best practices for each section
+
+**Frontend Verification**: View profile completeness indicators, verify suggestions and scoring
 
 ---
 
 ### 🧪 Quality Assurance and Testing (1 Use Case)
 
-#### UC-036: Unit Test Coverage Implementation
+#### UC-041: Unit Test Coverage Implementation
 **Summary**: As a developer, I want comprehensive unit test coverage so code quality is maintained and regressions are prevented.
 
 **Acceptance Criteria**:
@@ -594,7 +598,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 - Database operation tests with test database
 - API endpoint tests for all Sprint 1 endpoints
 - Form validation logic tests
-- File upload functionality tests
+- Profile management functionality tests
 - OAuth integration tests with mocked providers
 - Password hashing and validation tests
 - Session management tests
@@ -618,15 +622,3 @@ Each use case is considered complete when:
 6. **Frontend Verification**: Feature demonstrable through the user interface
 7. **Performance**: No significant performance degradation introduced
 8. **Security**: Security considerations addressed (input validation, authentication, etc.)
-
-## Sprint Success Criteria
-
-Sprint 1 is successful when:
-- All 36 use cases are completed according to Definition of Done
-- User can register, login, and create a basic profile
-- Document upload functionality is working
-- Brand identity is consistently applied
-- Database and API foundation is solid
-- Unit test coverage exceeds 90%
-- No critical bugs in core authentication flow
-- Application is ready for Sprint 2 feature development

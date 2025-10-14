@@ -5,7 +5,6 @@
 
 Establish the foundational infrastructure for the ATS for Candidates platform by implementing core authentication, database architecture, brand identity, and basic user profile functionality. This sprint creates the essential building blocks that will support all subsequent features while ensuring a secure, scalable, and professionally branded user experience.
 
-**Duration**: Weeks 1-4
 **Goal**: Deliver a functional foundation with user registration, login, profile creation, and document upload capabilities.
 
 ---

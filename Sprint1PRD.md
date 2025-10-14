@@ -12,7 +12,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ## Use Cases by Sprint Goal
 
-### 🔐 Authentication System and User Management (10 Use Cases)
+### 🔐 Authentication System and User Management (9 Use Cases)
 
 #### UC-001: User Registration with Email
 **Summary**: As a new user, I want to register for an account using my email address so I can access the platform.
@@ -121,22 +121,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-008: User Session Management
-**Summary**: As a logged-in user, I want my session to be maintained securely so I don't have to repeatedly log in during normal usage.
-
-**Acceptance Criteria**:
-- Session remains active for 24 hours of inactivity
-- Session extends when user performs actions
-- Session expires after 7 days regardless of activity
-- Warning message displayed 5 minutes before session expiry
-- Expired sessions redirect to login with informative message
-- Multiple concurrent sessions allowed from different devices
-
-**Frontend Verification**: Log in, wait for session expiry warning, verify auto-logout behavior
-
----
-
-#### UC-009: User Profile Access Control
+#### UC-008: User Profile Access Control
 **Summary**: As a user, I want to ensure only I can access my profile data so my information remains secure.
 
 **Acceptance Criteria**:
@@ -151,7 +136,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-010: Account Deletion Request
+#### UC-009: Account Deletion Request
 **Summary**: As a user, I want to delete my account so I can remove all my personal data from the platform.
 
 **Acceptance Criteria**:
@@ -169,7 +154,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ### 🗄️ Database Design and API Architecture (3 Use Cases)
 
-#### UC-011: User Data Persistence
+#### UC-010: User Data Persistence
 **Summary**: As a developer, I want user registration data to be properly stored so user accounts persist across sessions.
 
 **Acceptance Criteria**:
@@ -185,7 +170,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-012: RESTful User API Endpoints
+#### UC-011: RESTful User API Endpoints
 **Summary**: As a frontend developer, I want standardized API endpoints so I can interact with user data consistently.
 
 **Acceptance Criteria**:
@@ -202,7 +187,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-013: API Error Handling
+#### UC-012: API Error Handling
 **Summary**: As a frontend developer, I want consistent error responses from APIs so I can provide appropriate user feedback.
 
 **Acceptance Criteria**:
@@ -220,7 +205,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ### 🎨 Brand Identity and Design System (8 Use Cases)
 
-#### UC-019: Logo and Brand Assets Creation
+#### UC-013: Logo and Brand Assets Creation
 **Summary**: As a user, I want to see a professional logo and consistent branding so I trust the platform's credibility.
 
 **Acceptance Criteria**:
@@ -236,7 +221,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-020: Color Scheme Implementation
+#### UC-014: Color Scheme Implementation
 **Summary**: As a user, I want a cohesive color scheme throughout the application so the interface feels professional and unified.
 
 **Acceptance Criteria**:
@@ -252,7 +237,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-021: Typography System
+#### UC-015: Typography System
 **Summary**: As a user, I want consistent and readable typography so content is easy to read and professional in appearance.
 
 **Acceptance Criteria**:
@@ -268,7 +253,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-022: Navigation Menu Design
+#### UC-016: Navigation Menu Design
 **Summary**: As a user, I want clear and intuitive navigation so I can easily move between different sections of the application.
 
 **Acceptance Criteria**:
@@ -284,7 +269,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-023: Button and Form Component Styling
+#### UC-017: Button and Form Component Styling
 **Summary**: As a user, I want consistent button and form styling so I can easily identify interactive elements and complete tasks efficiently.
 
 **Acceptance Criteria**:
@@ -300,23 +285,24 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-024: Layout and Grid System
-**Summary**: As a user, I want content to be well-organized and properly aligned so information is easy to scan and read.
+#### UC-018: Responsive User Interface
+**Summary**: As a user, I want the application to work seamlessly across different devices and screen sizes so I can access it from any device.
 
 **Acceptance Criteria**:
-- Consistent page margins and padding
-- Grid system for responsive layout design
-- Maximum content width for optimal reading
-- Proper spacing between content sections
-- Alignment consistency across pages
-- White space used effectively for visual breathing room
-- Layout adapts appropriately to different screen sizes
+- Application functions properly on desktop screens (1920x1080 and above)
+- Application adapts to tablet screens (768px to 1024px width)
+- Application works on mobile devices (320px to 767px width)
+- Navigation collapses to hamburger menu on smaller screens
+- Text remains readable at all screen sizes
+- Buttons and interactive elements remain accessible on touch devices
+- Forms are usable without horizontal scrolling
+- Profile sections stack appropriately on smaller screens
 
-**Frontend Verification**: View pages at different screen sizes, verify layout consistency and alignment
+**Frontend Verification**: Test application on various screen sizes, verify functionality and readability
 
 ---
 
-#### UC-025: Icon System Implementation
+#### UC-019: Icon System Implementation
 **Summary**: As a user, I want consistent iconography throughout the interface so I can quickly understand functionality and navigate efficiently.
 
 **Acceptance Criteria**:
@@ -332,7 +318,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-026: Card and Container Styling
+#### UC-020: Card and Container Styling
 **Summary**: As a user, I want content grouped in visually distinct containers so information is organized and easy to digest.
 
 **Acceptance Criteria**:
@@ -350,7 +336,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ### 👤 Profile Management System (14 Use Cases)
 
-#### UC-027: Basic Profile Information Form
+#### UC-021: Basic Profile Information Form
 **Summary**: As a user, I want to enter my basic profile information so I can create a complete professional profile.
 
 **Acceptance Criteria**:
@@ -367,7 +353,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-028: Profile Picture Upload
+#### UC-022: Profile Picture Upload
 **Summary**: As a user, I want to upload a profile picture so my profile appears professional and personalized.
 
 **Acceptance Criteria**:
@@ -384,7 +370,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-029: Employment History - Add Entry
+#### UC-023: Employment History - Add Entry
 **Summary**: As a user, I want to add employment history entries so I can showcase my work experience.
 
 **Acceptance Criteria**:
@@ -401,7 +387,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-030: Employment History - View and Edit
+#### UC-024: Employment History - View and Edit
 **Summary**: As a user, I want to view and edit my employment history so I can keep my work experience current.
 
 **Acceptance Criteria**:
@@ -418,7 +404,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-031: Employment History - Delete Entry
+#### UC-025: Employment History - Delete Entry
 **Summary**: As a user, I want to delete employment entries so I can remove outdated or incorrect information.
 
 **Acceptance Criteria**:
@@ -435,7 +421,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-032: Skills - Add and Manage Skills
+#### UC-026: Skills - Add and Manage Skills
 **Summary**: As a user, I want to add and manage my skills so employers can assess my capabilities.
 
 **Acceptance Criteria**:
@@ -452,7 +438,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-033: Skills - Category Organization
+#### UC-027: Skills - Category Organization
 **Summary**: As a user, I want to organize my skills by category so they are easier to review and understand.
 
 **Acceptance Criteria**:
@@ -469,7 +455,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-034: Education - Add Educational Background
+#### UC-028: Education - Add Educational Background
 **Summary**: As a user, I want to add my educational background so my qualifications are properly documented.
 
 **Acceptance Criteria**:
@@ -486,7 +472,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-035: Education - View and Edit Entries
+#### UC-029: Education - View and Edit Entries
 **Summary**: As a user, I want to view and edit my education entries so I can keep my academic background current.
 
 **Acceptance Criteria**:
@@ -503,7 +489,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-036: Certifications - Add and Manage
+#### UC-030: Certifications - Add and Manage
 **Summary**: As a user, I want to add and manage my certifications so I can highlight my professional qualifications.
 
 **Acceptance Criteria**:
@@ -520,7 +506,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-037: Special Projects - Add Project Entries
+#### UC-031: Special Projects - Add Project Entries
 **Summary**: As a user, I want to add special projects so I can showcase significant work beyond regular employment.
 
 **Acceptance Criteria**:
@@ -537,7 +523,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-038: Special Projects - Portfolio View
+#### UC-032: Special Projects - Portfolio View
 **Summary**: As a user, I want to view my projects in a portfolio format so I can effectively showcase my work.
 
 **Acceptance Criteria**:
@@ -554,7 +540,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-039: Profile Overview Dashboard
+#### UC-033: Profile Overview Dashboard
 **Summary**: As a user, I want a dashboard overview of my complete profile so I can see all information at a glance.
 
 **Acceptance Criteria**:
@@ -571,7 +557,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ---
 
-#### UC-040: Profile Completeness and Validation
+#### UC-034: Profile Completeness and Validation
 **Summary**: As a user, I want guidance on profile completeness so I know how to improve my professional presentation.
 
 **Acceptance Criteria**:
@@ -590,7 +576,7 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 
 ### 🧪 Quality Assurance and Testing (1 Use Case)
 
-#### UC-041: Unit Test Coverage Implementation
+#### UC-035: Unit Test Coverage Implementation
 **Summary**: As a developer, I want comprehensive unit test coverage so code quality is maintained and regressions are prevented.
 
 **Acceptance Criteria**:

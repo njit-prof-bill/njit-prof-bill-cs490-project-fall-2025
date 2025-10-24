@@ -141,11 +141,11 @@ Establish the foundational infrastructure for the ATS for Candidates platform by
 **Acceptance Criteria**:
 - Account deletion option available in profile settings
 - Deletion requires password confirmation
-- Warning message explains data removal is permanent
-- Soft delete maintains data for 30 days before permanent removal
-- User immediately logged out after deletion request
-- Confirmation email sent to user about deletion
-- Deleted accounts cannot log in during 30-day grace period
+- Warning message explains data removal is immediate and permanent
+- User immediately logged out after deletion
+- Account and all associated data permanently removed
+- Confirmation email sent to user about completed deletion
+- Deleted accounts cannot log in (account no longer exists)
 
 **Frontend Verification**: Navigate to settings, request account deletion, verify logout and login prevention
 

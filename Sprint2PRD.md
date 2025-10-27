@@ -5,7 +5,7 @@
 
 Build the core job search functionality that enables candidates to manage job opportunities and leverage AI to create tailored application materials. This sprint transforms the platform from a profile management system into a functional job search tool with intelligent content generation capabilities.
 
-**Duration**: Weeks 5-8  
+**Duration**: Weeks 5-8
 **Goal**: Deliver job tracking, AI-powered resume/cover letter generation, company research, and application pipeline management.
 
 ---

@@ -143,7 +143,6 @@ Build the core job search functionality that enables candidates to manage job op
 - Recent news and updates about company
 - Glassdoor rating integration (if available)
 - Company logo display
-- Multiple locations handling
 - Company contact information
 
 **Frontend Verification**: View job with company information, verify all company details display correctly
@@ -158,7 +157,6 @@ Build the core job search functionality that enables candidates to manage job op
 - Application response rate percentage
 - Average time in each pipeline stage
 - Monthly application volume chart
-- Success rate by industry or job type
 - Application deadline adherence tracking
 - Time-to-offer analytics
 - Export statistics to CSV
@@ -313,7 +311,6 @@ Build the core job search functionality that enables candidates to manage job op
 - Spell check and grammar validation
 - Format consistency checking
 - Length optimization suggestions (1-2 pages)
-- ATS compatibility score
 - Missing information warnings
 - Contact information validation
 - Professional tone analysis
@@ -513,24 +510,7 @@ Build the core job search functionality that enables candidates to manage job op
 
 ---
 
-#### UC-065: Company Culture Analysis
-**Summary**: As a user, I want to understand company culture so I can tailor my application and assess culture fit.
-
-**Acceptance Criteria**:
-- Analyze company website and content for culture indicators
-- Extract values and mission statements
-- Research employee reviews and feedback
-- Identify work environment characteristics
-- Culture keywords and themes identification
-- Culture fit scoring based on user preferences
-- Culture comparison between companies
-- Culture insights for application tailoring
-
-**Frontend Verification**: View company culture analysis, verify insights and culture fit scoring
-
----
-
-#### UC-066: Job Matching Algorithm
+#### UC-065: Job Matching Algorithm
 **Summary**: As a user, I want the system to suggest how well I match specific job opportunities so I can prioritize my applications.
 
 **Acceptance Criteria**:
@@ -547,7 +527,7 @@ Build the core job search functionality that enables candidates to manage job op
 
 ---
 
-#### UC-067: Skills Gap Analysis
+#### UC-066: Skills Gap Analysis
 **Summary**: As a user, I want to identify skill gaps for specific job opportunities so I can focus my professional development efforts.
 
 **Acceptance Criteria**:
@@ -564,7 +544,7 @@ Build the core job search functionality that enables candidates to manage job op
 
 ---
 
-#### UC-068: Salary Research and Benchmarking
+#### UC-067: Salary Research and Benchmarking
 **Summary**: As a user, I want to research salary information for job opportunities so I can negotiate effectively.
 
 **Acceptance Criteria**:
@@ -581,7 +561,7 @@ Build the core job search functionality that enables candidates to manage job op
 
 ---
 
-#### UC-069: Interview Insights and Preparation
+#### UC-068: Interview Insights and Preparation
 **Summary**: As a user, I want insights about the interview process for specific companies so I can prepare effectively.
 
 **Acceptance Criteria**:
@@ -598,26 +578,9 @@ Build the core job search functionality that enables candidates to manage job op
 
 ---
 
-#### UC-070: Networking and Connection Opportunities
-**Summary**: As a user, I want to identify networking opportunities at target companies so I can build connections that may help with my application.
-
-**Acceptance Criteria**:
-- Identify current employees in similar roles
-- Find alumni connections at the company
-- Discover mutual connections through social networks
-- Suggest networking approaches and outreach templates
-- Track networking activities and outcomes
-- Connection warm-up sequences
-- Networking success analytics
-- Export connection information
-
-**Frontend Verification**: View networking opportunities for company, verify connection suggestions and outreach templates
-
----
-
 ### 📋 Application Pipeline Management (4 Use Cases)
 
-#### UC-071: Application Workflow Automation
+#### UC-069: Application Workflow Automation
 **Summary**: As a user, I want to automate parts of my application workflow so I can apply to more jobs efficiently.
 
 **Acceptance Criteria**:
@@ -628,13 +591,12 @@ Build the core job search functionality that enables candidates to manage job op
 - Template responses for common application questions
 - Bulk application operations
 - Application checklist automation
-- Integration with external job boards
 
 **Frontend Verification**: Set up application automation rules, verify automated actions and scheduling
 
 ---
 
-#### UC-072: Application Status Monitoring
+#### UC-070: Application Status Monitoring
 **Summary**: As a user, I want to monitor the status of my applications so I can track progress and follow up appropriately.
 
 **Acceptance Criteria**:
@@ -651,7 +613,7 @@ Build the core job search functionality that enables candidates to manage job op
 
 ---
 
-#### UC-073: Interview Scheduling Integration
+#### UC-071: Interview Scheduling Integration
 **Summary**: As a user, I want to schedule interviews directly from my application pipeline so I can manage my interview calendar efficiently.
 
 **Acceptance Criteria**:
@@ -668,7 +630,7 @@ Build the core job search functionality that enables candidates to manage job op
 
 ---
 
-#### UC-074: Application Analytics Dashboard
+#### UC-072: Application Analytics Dashboard
 **Summary**: As a user, I want to see analytics about my application pipeline so I can optimize my job search strategy.
 
 **Acceptance Criteria**:
@@ -687,7 +649,7 @@ Build the core job search functionality that enables candidates to manage job op
 
 ### 🧪 Quality Assurance and Testing (1 Use Case)
 
-#### UC-075: Unit Test Coverage Implementation
+#### UC-073: Unit Test Coverage Implementation
 **Summary**: As a developer, I want comprehensive unit test coverage so code quality is maintained and regressions are prevented.
 
 **Acceptance Criteria**:
@@ -719,40 +681,3 @@ Each use case is considered complete when:
 6. **Frontend Verification**: Feature demonstrable through the user interface
 7. **Performance**: No significant performance degradation introduced
 8. **AI Integration**: AI features properly integrated and tested with fallback mechanisms
-
-## Sprint Success Criteria
-
-Sprint 2 is successful when:
-- All 40 use cases are completed according to Definition of Done
-- Users can add, manage, and track job opportunities through a complete pipeline
-- AI-powered resume and cover letter generation is functional and produces quality output
-- Company research provides valuable insights for application preparation
-- Job matching algorithm provides accurate compatibility scoring
-- Application workflow is streamlined and efficient
-- Unit test coverage exceeds 90% for all new functionality
-- Integration with Sprint 1 profile system is seamless
-- No critical bugs in core job management or AI generation flows
-- Application is ready for Sprint 3 interview and analytics features
-
-## Technical Considerations
-
-### AI Integration Requirements
-- OpenAI GPT-4 API integration for content generation
-- Robust error handling and fallback mechanisms
-- AI response caching for performance optimization
-- Content quality validation and filtering
-- User feedback integration for AI improvement
-
-### Data Management
-- Job opportunity data schema design
-- Company information storage and caching
-- Application material version control
-- Analytics data collection and aggregation
-- Data privacy and security compliance
-
-### Performance Optimization
-- Efficient job search and filtering
-- AI content generation response time optimization
-- Company research data caching
-- Large dataset handling for job analytics
-- Real-time pipeline updates

@@ -584,7 +584,6 @@ Build the core job search functionality that enables candidates to manage job op
 **Summary**: As a user, I want to automate parts of my application workflow so I can apply to more jobs efficiently.
 
 **Acceptance Criteria**:
-- Auto-populate application forms with profile data
 - Generate application packages (resume + cover letter + portfolio)
 - Schedule application submissions
 - Automated follow-up reminders

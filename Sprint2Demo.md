@@ -15,7 +15,7 @@ The demo should be bug free.
 
 Scoring for being prepared:
 - Running on the proper device, 5 points. Running on another device zero points.
-- Being prepared with content, 5 points. Minus one point for when an item is not available.
+- Being prepared with content, 5 points. **Have a user in your database with a full profile and multiple jobs, resumes, and letters**. Minus one point for when an item is not available.
 - The demo is bug free, 5 points. Minus one point for every bug that occurs during the demo.
 
 Scoring for the demo:
@@ -236,14 +236,6 @@ Let's see how our platform empowers job seekers!"
 - Run test suite demonstration
 - Show coverage reports and all tests passing
 - "90%+ test coverage ensures professional-grade quality"
-
-**[Demo Conclusion]**
-
-"In Sprint 2, we've transformed our platform from a profile manager into a complete AI-powered job search assistant. From intelligent job tracking to AI-generated application materials, from company research to pipeline automation - every feature is designed to give job seekers a competitive advantage.
-
-Our platform doesn't just organize your job search - it actively helps you succeed with data-driven insights and AI-powered assistance.
-
-Thank you for watching our Sprint 2 demo. Questions?"
 
 ---
 

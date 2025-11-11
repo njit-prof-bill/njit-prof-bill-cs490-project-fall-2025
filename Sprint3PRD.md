@@ -23,7 +23,6 @@ Transform the ATS for Candidates platform into a comprehensive interview prepara
 - Research leadership team and potential interviewers
 - Identify company's competitive landscape and market position
 - Compile recent news, funding announcements, and strategic initiatives
-- Extract company culture insights from Glassdoor and employee reviews
 - Generate talking points and intelligent questions to ask
 - Export research summary for offline preparation
 
@@ -32,7 +31,7 @@ Transform the ATS for Candidates platform into a comprehensive interview prepara
 ---
 
 #### UC-075: Role-Specific Interview Question Bank
-**Summary**: As a user, I want curated interview questions relevant to my target role so I can prepare focused responses.
+**Summary**: As a user, I want curated interview questions relevant to my target role so I can prepare focused written responses.
 
 **Acceptance Criteria**:
 - Generate question banks based on job title and industry
@@ -40,28 +39,28 @@ Transform the ATS for Candidates platform into a comprehensive interview prepara
 - Provide STAR method framework for behavioral questions
 - Suggest industry-specific technical questions and concepts
 - Include questions about company-specific challenges and opportunities
-- Offer difficulty levels from entry to senior positions
 - Link questions to skill requirements from job postings
-- Track which questions have been practiced
+- Track which questions have been practiced with written responses
+- Offer difficulty levels from entry to senior positions
 
 **Frontend Verification**: Browse question bank by role and category, verify question relevance and framework guidance
 
 ---
 
 #### UC-076: AI-Powered Response Coaching
-**Summary**: As a user, I want AI coaching on my interview responses so I can improve my answers and delivery.
+**Summary**: As a user, I want AI coaching on my written interview responses so I can improve my answers and delivery.
 
 **Acceptance Criteria**:
-- Record and analyze practice responses to interview questions
+- Write and submit practice responses to interview questions
 - Provide feedback on content, structure, and clarity
-- Suggest improvements for STAR method implementation
-- Analyze response timing and recommend adjustments
-- Identify filler words and speech patterns to improve
+- Analyze response length and recommend adjustments for optimal timing
+- Identify weak language patterns and suggest stronger alternatives
 - Score responses on relevance, specificity, and impact
 - Generate alternative response approaches
 - Track improvement over multiple practice sessions
+- Provide STAR method framework adherence analysis
 
-**Frontend Verification**: Record interview response, receive AI feedback, verify scoring and improvement suggestions
+**Frontend Verification**: Submit written interview response, receive AI feedback, verify scoring and improvement suggestions
 
 ---
 
@@ -71,14 +70,14 @@ Transform the ATS for Candidates platform into a comprehensive interview prepara
 **Acceptance Criteria**:
 - Generate interview scenarios based on target role and company
 - Simulate different interview formats (behavioral, technical, case study)
-- Provide real-time question prompts and follow-ups
-- Record full practice sessions for review
+- Provide sequential question prompts and follow-ups
+- Save written responses for all practice session questions
 - Generate performance summary and improvement areas
-- Include time management coaching and pacing guidance
-- Simulate common interview stress scenarios
+- Include response length guidance and pacing recommendations
+- Simulate common interview question progressions
 - Provide confidence building exercises and techniques
 
-**Frontend Verification**: Start mock interview session, complete full interview simulation, review performance summary
+**Frontend Verification**: Start mock interview session, complete full interview simulation with written responses, review performance summary
 
 ---
 
@@ -103,13 +102,12 @@ Transform the ATS for Candidates platform into a comprehensive interview prepara
 **Summary**: As a user, I want integrated interview scheduling so I can manage my interview calendar efficiently.
 
 **Acceptance Criteria**:
-- Sync with Google Calendar, Outlook, and other calendar platforms
+- Sync with Google Calendar or Outlook or other calendar platforms
 - Link interview appointments to specific job applications
 - Automatically generate interview preparation tasks and reminders
 - Include location/video link information and logistics
 - Send preparation reminders 24 hours and 2 hours before interview
 - Track interview outcomes and follow-up actions
-- Generate post-interview reflection prompts
 - Integrate with thank-you note generation system
 
 **Frontend Verification**: Schedule interview from job application, verify calendar sync and reminder system
@@ -157,7 +155,6 @@ Transform the ATS for Candidates platform into a comprehensive interview prepara
 - Generate personalized thank-you email templates
 - Include specific conversation references and interviewer details
 - Suggest appropriate timing for follow-up communications
-- Create LinkedIn connection request templates for interviewers
 - Provide status inquiry templates for delayed responses
 - Generate interview feedback request templates
 - Include networking follow-up templates for rejected applications
@@ -184,20 +181,20 @@ Transform the ATS for Candidates platform into a comprehensive interview prepara
 
 ---
 
-#### UC-084: Interview Video Practice and Analysis
-**Summary**: As a user, I want video practice tools so I can improve my visual presentation and communication skills.
+#### UC-084: Interview Response Writing Practice
+**Summary**: As a user, I want structured writing practice tools so I can improve my response quality and communication skills.
 
 **Acceptance Criteria**:
-- Record video responses to practice questions
-- Analyze body language, eye contact, and presentation skills
-- Provide feedback on professional appearance and background
-- Suggest improvements for virtual interview setup
-- Track confidence and clarity improvement over time
-- Include exercises for managing interview nerves
-- Provide tips for engaging virtual interview presence
+- Write responses to practice questions with timed exercises
+- Analyze written communication clarity and professionalism
+- Provide feedback on response structure and storytelling effectiveness
+- Suggest improvements for virtual interview preparation checklist
+- Track response quality and clarity improvement over time
+- Include exercises for managing interview nerves through preparation
+- Provide tips for crafting engaging and memorable responses
 - Generate comparison analysis between practice sessions
 
-**Frontend Verification**: Record video practice session, receive visual presentation feedback and improvement suggestions
+**Frontend Verification**: Complete timed writing practice session, receive communication feedback and improvement suggestions
 
 ---
 
@@ -224,7 +221,8 @@ Transform the ATS for Candidates platform into a comprehensive interview prepara
 **Summary**: As a user, I want to manage my professional network so I can leverage relationships for job opportunities and career advancement.
 
 **Acceptance Criteria**:
-- Import contacts from LinkedIn, Google Contacts, and email platforms
+- Manually add professional contacts with detailed information
+- Import contacts from Google Contacts or email platforms
 - Create detailed contact profiles with relationship context
 - Track interaction history and relationship strength
 - Categorize contacts by industry, role, and relationship type
@@ -233,7 +231,7 @@ Transform the ATS for Candidates platform into a comprehensive interview prepara
 - Track mutual connections and networking opportunities
 - Link contacts to specific companies and job opportunities
 
-**Frontend Verification**: Import and manage professional contacts, verify relationship tracking and categorization
+**Frontend Verification**: Add and manage professional contacts, verify relationship tracking and categorization
 
 ---
 
@@ -271,20 +269,20 @@ Transform the ATS for Candidates platform into a comprehensive interview prepara
 
 ---
 
-#### UC-089: LinkedIn Integration and Optimization
-**Summary**: As a user, I want LinkedIn integration so I can optimize my professional presence and networking efforts.
+#### UC-089: LinkedIn Profile Integration and Guidance
+**Summary**: As a user, I want LinkedIn OAuth integration and profile guidance so I can optimize my professional presence and networking efforts.
 
 **Acceptance Criteria**:
-- Sync LinkedIn connections with contact management system
-- Generate LinkedIn message templates for networking outreach
-- Track LinkedIn engagement and response rates
-- Provide LinkedIn profile optimization suggestions
-- Monitor industry thought leadership opportunities
-- Suggest content sharing strategies for visibility
-- Track LinkedIn networking campaign effectiveness
-- Include LinkedIn job application integration
+- Sign in with LinkedIn OAuth for account authentication
+- Import basic LinkedIn profile data (name, headline, profile picture) on signup
+- Generate LinkedIn message templates for manual networking outreach
+- Provide LinkedIn profile optimization suggestions and best practices
+- Suggest networking strategies and connection request templates
+- Provide guidance on content sharing strategies for visibility
+- Generate networking campaign templates and tracking
+- Include LinkedIn profile URL linking to job applications
 
-**Frontend Verification**: Connect LinkedIn account, sync contacts, send networking message using template
+**Frontend Verification**: Sign in with LinkedIn OAuth, view imported profile data, access networking templates and optimization guidance
 
 ---
 
@@ -452,7 +450,7 @@ Transform the ATS for Candidates platform into a comprehensive interview prepara
 - Analyze relationship strength development and engagement quality
 - Measure networking event ROI and relationship conversion rates
 - Track mutual value exchange and relationship reciprocity
-- Monitor LinkedIn engagement and professional visibility growth
+- Track manual networking activities and outreach attempts
 - Generate insights on most effective networking strategies
 - Include industry-specific networking benchmarks and best practices
 
@@ -568,10 +566,9 @@ Transform the ATS for Candidates platform into a comprehensive interview prepara
 **Acceptance Criteria**:
 - Create custom reports with user-selected metrics and date ranges
 - Include filtering options for specific companies, roles, or industries
-- Generate exportable reports in PDF and Excel formats
+- Generate exportable reports in PDF or Excel formats
 - Provide template reports for common analysis needs
 - Include data visualization options for trend and pattern analysis
-- Allow report scheduling and automated generation
 - Include sharing options for mentors, coaches, and accountability partners
 - Provide insights and recommendations within custom reports
 
@@ -748,7 +745,7 @@ Transform the ATS for Candidates platform into a comprehensive interview prepara
 - Performance prediction and forecasting algorithm tests
 - Database operation tests for all new Sprint 3 entities
 - API endpoint tests for all Sprint 3 functionality
-- Integration tests for third-party services (calendar, LinkedIn)
+- Integration tests for third-party services (calendar, LinkedIn OAuth, Google Contacts)
 - Test coverage reports generated automatically
 - All tests pass in CI/CD pipeline
 - Minimum 90% code coverage achieved for Sprint 3 components

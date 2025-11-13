@@ -148,24 +148,6 @@ Let's dive in!"
 - Switch to calendar view of upcoming deadlines
 - "Visual urgency indicators ensure you never miss an application deadline"
 
-### 2.6 Company Information Display
-**[Demo Action: View job with company information, verify all company details display correctly]**
-
-"Each job includes comprehensive company information for research..."
-- Open job details with company profile section
-- Show company size, industry, location, website
-- Display company description and mission statement
-- "Having company context right in the job details helps with application preparation"
-
-### 2.7 Job Archiving and Management
-**[Demo Action: Archive jobs, view archived list, restore jobs, verify organization]**
-
-"Keep your active job search organized with archiving..."
-- Archive completed or irrelevant jobs
-- Switch to archived jobs view
-- Restore an archived job
-- "Separation of active and archived jobs maintains focus on current opportunities"
-
 ---
 
 ## Act 3: AI-Powered Resume Generation (4 minutes)
@@ -217,15 +199,6 @@ Let's dive in!"
 - Create new version for different job types
 - Compare versions side-by-side
 - "Version control ensures you can track what works best for different opportunities"
-
-### 3.7 Resume Preview and Validation
-**[Demo Action: Preview resume, trigger validation checks, verify issue detection and suggestions]**
-
-"Built-in validation ensures professional quality..."
-- Show real-time resume preview
-- Trigger validation checks for spelling, grammar, format consistency
-- Display length optimization suggestions
-- "Automated quality checks catch issues before you submit"
 
 ---
 

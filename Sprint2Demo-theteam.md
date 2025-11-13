@@ -165,15 +165,6 @@ Let's dive in!"
 - Link cover letter version to same application
 - "See application materials history and download linked documents for reference"
 
-### 2.8 Company Information Display
-**[Demo Action: View job with company information, verify all company details display correctly]**
-
-"Each job includes comprehensive company information for research..."
-- Open job details with company profile section
-- Show company size, industry, location, website
-- Display company description and mission statement
-- "Having company context right in the job details helps with application preparation"
-
 ### 2.9 Job Statistics and Analytics
 **[Demo Action: View job statistics dashboard, verify calculations and chart displays]**
 
@@ -182,15 +173,6 @@ Let's dive in!"
 - "Visual charts show application volume, response rates, and pipeline progression"
 - Show total jobs by status and average time in each stage
 - "Export your statistics to CSV for detailed analysis"
-
-### 2.10 Job Archiving and Management
-**[Demo Action: Archive jobs, view archived list, restore jobs, verify organization]**
-
-"Keep your active job search organized with archiving..."
-- Archive completed or irrelevant jobs
-- Switch to archived jobs view
-- Restore an archived job
-- "Separation of active and archived jobs maintains focus on current opportunities"
 
 ---
 
@@ -251,16 +233,7 @@ Let's dive in!"
 - Compare versions side-by-side
 - "Version control ensures you can track what works best for different opportunities"
 
-### 3.8 Resume Preview and Validation
-**[Demo Action: Preview resume, trigger validation checks, verify issue detection and suggestions]**
-
-"Built-in validation ensures professional quality..."
-- Show real-time resume preview
-- Trigger validation checks for spelling, grammar, format consistency
-- Display length optimization suggestions
-- "Automated quality checks catch issues before you submit"
-
-### 3.9 Resume Collaboration and Feedback
+### 3.8 Resume Collaboration and Feedback
 **[Demo Action: Share resume link, add comments, verify feedback system and privacy controls]**
 
 "Get feedback from mentors and career coaches with collaboration features..."

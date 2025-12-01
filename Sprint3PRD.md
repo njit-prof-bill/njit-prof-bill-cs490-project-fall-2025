@@ -5,7 +5,6 @@
 
 Transform the ATS for Candidates platform into a comprehensive interview preparation and analytics powerhouse by implementing intelligent interview coaching, network relationship management, performance analytics, and multi-user collaboration features. This sprint elevates the platform from job application management to complete career advancement support.
 
-**Duration**: Weeks 9-12
 **Goal**: Deliver interview preparation tools, network management, analytics dashboard, and collaborative features that provide strategic career insights and interview success optimization.
 
 ---

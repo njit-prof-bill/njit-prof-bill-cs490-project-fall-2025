@@ -5,7 +5,6 @@
 
 Complete the ATS for Candidates platform by integrating external APIs, implementing advanced AI-powered workflow automation, deploying to production cloud infrastructure, and conducting comprehensive testing with real user feedback. This final sprint transforms the application from a development prototype into a production-ready, publicly accessible platform with professional deployment practices.
 
-**Duration**: Weeks 13-16
 **Goal**: Deliver external API integrations, advanced AI automation features, cloud-deployed production environment, comprehensive testing suite, and user feedback analysis for future iterations.
 
 ---

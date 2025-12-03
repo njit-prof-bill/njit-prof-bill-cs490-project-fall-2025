@@ -11,27 +11,9 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ## Use Cases by Sprint Goal
 
-### 🔌 Integration with External APIs (7 Use Cases)
+### 🔌 Integration with External APIs (6 Use Cases)
 
-#### UC-112: LinkedIn Profile Import via Public API
-**Summary**: As a user, I want to import my LinkedIn profile information so I can quickly populate my candidate profile without manual data entry.
-
-**Acceptance Criteria**:
-- Integrate with LinkedIn OAuth for user authentication
-- Import basic profile data: name, headline, summary, location
-- Import work experience with job titles, companies, dates, descriptions
-- Import education history with degrees, institutions, dates
-- Import skills list with endorsement counts
-- Handle API rate limits gracefully with user feedback
-- Merge or override the LinkedIn data into the ATS' profile from Sprint 1
-- Store import timestamp and allow re-import to update data
-- Handle LinkedIn API authentication errors with clear messaging
-
-**Frontend Verification**: Click "Import from LinkedIn", complete OAuth flow, verify profile data populates correctly
-
----
-
-#### UC-113: Salary Data Integration (Free Sources)
+#### UC-112: Salary Data Integration (Free Sources)
 **Summary**: As a user, I want to see salary benchmarks for job positions so I can make informed compensation decisions.
 
 **Acceptance Criteria**:
@@ -48,7 +30,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-114: Email Integration for Application Tracking
+#### UC-113: Email Integration for Application Tracking
 **Summary**: As a user, I want to track application-related emails so I can automatically update job statuses based on employer communications.
 
 **Acceptance Criteria**:
@@ -65,7 +47,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-115: GitHub Repository Showcase Integration
+#### UC-114: GitHub Repository Showcase Integration
 **Summary**: As a user, I want to showcase my GitHub projects so I can demonstrate technical skills to potential employers.
 
 **Acceptance Criteria**:
@@ -82,7 +64,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-116: External Skills Assessment Platform Integration
+#### UC-115: External Skills Assessment Platform Integration
 **Summary**: As a user, I want to link external skill certifications so I can validate my technical abilities.
 
 **Acceptance Criteria**:
@@ -99,7 +81,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-117: Location and Geo-coding Services
+#### UC-116: Location and Geo-coding Services
 **Summary**: As a user, I want to visualize my tracked jobs from Sprint 2 on an interactive map so I can understand job locations and plan commutes.
 
 **Acceptance Criteria**:
@@ -117,7 +99,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-118: API Rate Limiting and Error Handling Dashboard
+#### UC-117: API Rate Limiting and Error Handling Dashboard
 **Summary**: As an administrator, I want to monitor API usage and errors so I can optimize integrations and stay within free tier limits.
 
 **Acceptance Criteria**:
@@ -136,7 +118,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ### 🤖 Advanced AI Features and Workflow Automation (11 Use Cases)
 
-#### UC-119: Smart Follow-Up Reminder System
+#### UC-118: Smart Follow-Up Reminder System
 **Summary**: As a user, I want intelligent follow-up reminders so I maintain appropriate contact with employers without being pushy.
 
 **Acceptance Criteria**:
@@ -153,7 +135,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-120: Application Success Optimization Dashboard
+#### UC-119: Application Success Optimization Dashboard
 **Summary**: As a user, I want a dashboard that helps me optimize my application success rate so I can focus on strategies that work.
 
 **Acceptance Criteria**:
@@ -170,7 +152,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-121: Application Material A/B Testing Dashboard
+#### UC-120: Application Material A/B Testing Dashboard
 **Summary**: As a user, I want to A/B test different versions of my resume and cover letter so I can determine which materials generate the best response rates.
 
 **Acceptance Criteria**:
@@ -187,7 +169,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-122: Employer Response Time Prediction
+#### UC-121: Employer Response Time Prediction
 **Summary**: As a user, I want to know when I can expect to hear back from employers so I can manage my expectations and follow-up timing.
 
 **Acceptance Criteria**:
@@ -204,7 +186,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-123: Application Package Quality Scoring
+#### UC-122: Application Package Quality Scoring
 **Summary**: As a user, I want an AI-powered quality score for each job application package so I can identify weak applications before submitting.
 
 **Acceptance Criteria**:
@@ -221,7 +203,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-124: Competitive Analysis for Applications
+#### UC-123: Competitive Analysis for Applications
 **Summary**: As a user, I want to understand how competitive I am for each role so I can prioritize applications and tailor my approach.
 
 **Acceptance Criteria**:
@@ -238,7 +220,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-125: Job Application Timing Optimizer
+#### UC-124: Job Application Timing Optimizer
 **Summary**: As a user, I want recommendations on the best time to submit applications so I can maximize visibility to recruiters.
 
 **Acceptance Criteria**:
@@ -255,7 +237,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-126: Multi-Platform Application Tracker
+#### UC-125: Multi-Platform Application Tracker
 **Summary**: As a user, I want to track applications across multiple job platforms (LinkedIn, Indeed, Glassdoor, company sites) in one place so I don't lose track of where I've applied.
 
 **Acceptance Criteria**:
@@ -272,7 +254,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-127: Interview Question Response Library
+#### UC-126: Interview Question Response Library
 **Summary**: As a user, I want to build a library of my best interview responses so I can refine answers over time and reuse them across interviews.
 
 **Acceptance Criteria**:
@@ -289,7 +271,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-128: Offer Evaluation & Comparison Tool
+#### UC-127: Offer Evaluation & Comparison Tool
 **Summary**: As a user, I want to compare multiple job offers across all dimensions so I can make the best career decision.
 
 **Acceptance Criteria**:
@@ -306,7 +288,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-129: Career Path Simulation
+#### UC-128: Career Path Simulation
 **Summary**: As a user, I want to simulate different career path outcomes so I can make strategic job decisions aligned with long-term goals.
 
 **Acceptance Criteria**:
@@ -325,7 +307,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ### ☁️ Cloud Deployment and Production Environment (12 Use Cases)
 
-#### UC-130: Production Environment Setup on Free-Tier Cloud Platform
+#### UC-129: Production Environment Setup on Free-Tier Cloud Platform
 **Summary**: As a development team, we want to deploy the application to a free-tier cloud platform so it's publicly accessible without incurring costs.
 
 **Acceptance Criteria**:
@@ -342,7 +324,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-131: Database Migration to Production
+#### UC-130: Database Migration to Production
 **Summary**: As a development team, we want to migrate the database schema to production so data persistence works correctly.
 
 **Acceptance Criteria**:
@@ -359,7 +341,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-132: Environment Configuration Management
+#### UC-131: Environment Configuration Management
 **Summary**: As a developer, I want separate configurations for development, staging, and production so each environment operates correctly.
 
 **Acceptance Criteria**:
@@ -376,7 +358,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-133: CI/CD Pipeline Configuration
+#### UC-132: CI/CD Pipeline Configuration
 **Summary**: As a development team, we want automated deployment pipelines so code changes are deployed efficiently and reliably.
 
 **Acceptance Criteria**:
@@ -393,7 +375,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-134: Production Monitoring and Logging
+#### UC-133: Production Monitoring and Logging
 **Summary**: As a development team, we want monitoring and logging so we can detect and troubleshoot production issues.
 
 **Acceptance Criteria**:
@@ -410,7 +392,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-135: Production Performance Optimization
+#### UC-134: Production Performance Optimization
 **Summary**: As a user, I want fast page load times so I can efficiently use the application.
 
 **Acceptance Criteria**:
@@ -427,11 +409,10 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-136: Production Security Hardening
+#### UC-135: Production Security Hardening
 **Summary**: As a development team, we want production security measures so user data is protected.
 
 **Acceptance Criteria**:
-- Implement rate limiting on API endpoints
 - Enable CSRF protection for all forms
 - Sanitize all user inputs to prevent XSS attacks
 - Use parameterized queries to prevent SQL injection
@@ -444,7 +425,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-137: Scalability and Resource Management
+#### UC-136: Scalability and Resource Management
 **Summary**: As a development team, we want the application to handle growth so it remains performant as user base increases.
 
 **Acceptance Criteria**:
@@ -461,7 +442,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-138: Backup and Disaster Recovery
+#### UC-137: Backup and Disaster Recovery
 **Summary**: As a development team, we want backup and recovery procedures so we can restore service after failures.
 
 **Acceptance Criteria**:
@@ -478,7 +459,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-139: Production Documentation and Runbooks
+#### UC-138: Production Documentation and Runbooks
 **Summary**: As a development team, we want comprehensive documentation so we can maintain and troubleshoot production systems.
 
 **Acceptance Criteria**:
@@ -486,7 +467,6 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 - Create deployment runbooks with step-by-step procedures
 - Document all environment variables and configurations
 - Create troubleshooting guides for common issues
-- Document API endpoints and integration points
 - Maintain change log for production updates
 - Create on-call procedures and escalation paths
 - Document monitoring and alerting setup
@@ -495,7 +475,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-140: Domain and DNS Configuration
+#### UC-139: Domain and DNS Configuration
 **Summary**: As a user, I want to access the application via a professional domain so it appears credible and trustworthy.
 
 **Acceptance Criteria**:
@@ -512,7 +492,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-141: Production Data Seeding and Initial Content
+#### UC-140: Production Data Seeding and Initial Content
 **Summary**: As a development team, we want production data seeded so new users have example content and guidance.
 
 **Acceptance Criteria**:
@@ -531,14 +511,13 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ### 🧪 Final Testing and Quality Assurance (10 Use Cases)
 
-#### UC-142: End-to-End User Journey Testing
+#### UC-141: End-to-End User Journey Testing
 **Summary**: As a QA tester, I want to test complete user workflows so we ensure the entire application functions correctly.
 
 **Acceptance Criteria**:
 - Test complete registration to job application workflow
 - Verify AI features work end-to-end
 - Test multi-user collaboration scenarios
-- Verify external API integrations function correctly
 - Test mobile responsiveness across devices
 - Verify email notifications are sent correctly
 - Test error handling and edge cases
@@ -548,13 +527,12 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-143: Performance and Load Testing
+#### UC-142: Performance and Load Testing
 **Summary**: As a QA tester, I want to test application performance under load so we ensure it can handle multiple concurrent users.
 
 **Acceptance Criteria**:
 - Use free load testing tools (Apache JMeter, k6)
 - Simulate 50-100 concurrent users
-- Test API endpoint response times under load
 - Identify performance bottlenecks
 - Verify database query performance
 - Test file upload/download under load
@@ -565,7 +543,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-144: Cross-Browser Compatibility Testing
+#### UC-143: Cross-Browser Compatibility Testing
 **Summary**: As a QA tester, I want to verify the application works across different browsers so all users have a consistent experience.
 
 **Acceptance Criteria**:
@@ -582,7 +560,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-145: Accessibility Compliance Testing
+#### UC-144: Accessibility Compliance Testing
 **Summary**: As a QA tester, I want to verify accessibility compliance so the application is usable by people with disabilities.
 
 **Acceptance Criteria**:
@@ -599,7 +577,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-146: Security Penetration Testing
+#### UC-145: Security Penetration Testing
 **Summary**: As a security tester, I want to conduct basic penetration testing so we identify and fix security vulnerabilities.
 
 **Acceptance Criteria**:
@@ -616,7 +594,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-147: Analytics Implementation and Tracking
+#### UC-146: Analytics Implementation and Tracking
 **Summary**: As a product manager, I want analytics tracking so we understand how users interact with the platform.
 
 **Acceptance Criteria**:
@@ -633,7 +611,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-148: Bug Tracking and Issue Resolution
+#### UC-147: Bug Tracking and Issue Resolution
 **Summary**: As a development team, we want systematic bug tracking so we efficiently resolve issues found during testing and beta.
 
 **Acceptance Criteria**:
@@ -650,7 +628,7 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-149: Final Pre-Launch Checklist and Go-Live
+#### UC-148: Final Pre-Launch Checklist and Go-Live
 **Summary**: As a project manager, I want a comprehensive pre-launch checklist so we ensure readiness for public release.
 
 **Acceptance Criteria**:
@@ -677,7 +655,6 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 **Summary**: As a QA engineer, I want comprehensive test coverage for all Sprint 4 features so we ensure production quality.
 
 **Acceptance Criteria**:
-- Unit tests for all API integration functions
 - Unit tests for AI automation features
 - Integration tests for external API connections
 - Integration tests for workflow automation
@@ -688,7 +665,6 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 - Cross-browser automated tests
 - Mobile responsiveness tests
 - Database operation tests for all Sprint 4 entities
-- API endpoint tests for all Sprint 4 functionality
 - Test coverage reports generated automatically
 - All tests pass in CI/CD pipeline
 - Minimum 90% code coverage achieved for Sprint 4 components

@@ -9,6 +9,22 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
+## Modified Use Cases
+
+The following use cases have been simplified to ensure they are achievable within the project timeline:
+
+| Use Case | Original Title | Revised Title | Reason for Change |
+|----------|---------------|---------------|-------------------|
+| UC-113 | Email Integration for Application Tracking | Email Integration for Application Tracking | Changed from automatic email scanning to manual linking |
+| UC-115 | External Skills Assessment Platform Integration | Skills and Certifications Showcase | Changed from API integration to manual entry |
+| UC-120 | Application Material A/B Testing Dashboard | Application Material Comparison Dashboard | Changed from automatic tracking to manual outcome marking |
+| UC-121 | Employer Response Time Prediction | Personal Response Time Tracking | Changed from predictive modeling to personal tracking |
+| UC-123 | Competitive Analysis for Applications | Job Requirements Match Analysis | Changed from competitive analysis to skills matching |
+| UC-124 | Job Application Timing Optimizer | Application Scheduling and Reminders | Changed from timing optimization to basic scheduling |
+| UC-128 | Career Path Simulation | Career Growth Calculator | Changed from complex simulation to simple calculator |
+
+---
+
 ## Use Cases by Sprint Goal
 
 ### 🔌 Integration with External APIs (6 Use Cases)

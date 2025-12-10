@@ -31,19 +31,20 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 ---
 
 #### UC-113: Email Integration for Application Tracking
-**Summary**: As a user, I want to track application-related emails so I can automatically update job statuses based on employer communications.
+**Summary**: As a user, I want to manually link emails to my job applications so I can keep all communication in one place.
 
 **Acceptance Criteria**:
 - Integrate with Gmail API read-only access (free tier)
-- Scan inbox for job application-related emails (recruiter, interview invitations)
-- Suggest job status updates based on email content
-- Display recent application emails on job detail pages
-- Allow users to link specific emails to job applications
-- Respect user privacy with opt-in email scanning
+- Display recent emails in sidebar when viewing a job application
+- Search emails by company name or job title keywords
+- Allow users to manually link specific emails to job applications
+- Store email metadata (subject, date, sender, snippet) with application
+- Display linked emails chronologically on job detail page
+- Optional simple keyword detection for status suggestions ("Interview", "Offer", "Rejection" in subject)
+- Respect user privacy with opt-in email access
 - Handle email API rate limits and authentication
-- Provide email scanning frequency preferences
 
-**Frontend Verification**: Connect Gmail account, verify application-related emails are identified and linked
+**Frontend Verification**: Connect Gmail account, search and manually link emails to job application, verify emails display on job detail page
 
 ---
 
@@ -152,20 +153,21 @@ Complete the ATS for Candidates platform by integrating external APIs, implement
 
 ---
 
-#### UC-120: Application Material A/B Testing Dashboard
-**Summary**: As a user, I want to A/B test different versions of my resume and cover letter so I can determine which materials generate the best response rates.
+#### UC-120: Application Material Comparison Dashboard
+**Summary**: As a user, I want to compare the performance of different resume and cover letter versions so I can identify which materials work best.
 
 **Acceptance Criteria**:
-- Create multiple versions of resume and cover letter for testing
-- Randomly assign versions to similar job applications
-- Track response rates (interview invites, rejections, no response) by version
-- Calculate statistical significance of results (minimum sample size: 10 applications per version)
-- Display comparison metrics: response rate, time to response, interview conversion rate
-- Identify winning version based on key metrics
-- Provide insights on what elements (format, content, length) drive success
-- Allow users to archive underperforming versions and iterate on winners
+- Create and label multiple versions of resume and cover letter (Version A, B, C, etc.)
+- Track which version was used for each job application
+- Manually mark application outcomes (response received, interview, offer, rejection, no response)
+- Display side-by-side comparison showing applications count and outcomes per version
+- Calculate and display simple metrics: response rate %, interview rate %, offer rate %
+- Show average time to response for each version
+- Provide comparison chart visualizing performance differences
+- Include note: "Meaningful comparisons require 10+ applications per version"
+- Allow archiving of unused versions
 
-**Frontend Verification**: Create 2 resume versions, apply to 10+ jobs with each, view comparative performance metrics and statistical significance
+**Frontend Verification**: Create 2 resume versions, track which version used for applications, manually mark outcomes, view comparative performance metrics
 
 ---
 

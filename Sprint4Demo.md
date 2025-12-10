@@ -122,19 +122,19 @@ Let's see how our fully deployed platform delivers a production-ready career adv
 
 ## Act 3: Advanced AI Workflow Automation (5 minutes)
 
-### 3.1 Success Optimization and A/B Testing (UC-119, UC-120)
+### 3.1 Success Optimization and Material Comparison (UC-119, UC-120)
 **[Demo Action: View optimization dashboard, verify recommendations are data-driven and actionable]**
-**[Demo Action: View A/B testing results dashboard with pre-populated data, verify comparative performance metrics]**
+**[Demo Action: View material comparison dashboard with pre-populated data, verify comparative performance metrics]**
 
 "AI optimizes every aspect of your job search..."
 - Navigate to success optimization dashboard
 - Display success metrics: response rate 34%, interview conversion 18%
-- "AI identifies which resume version performs best"
+- "Track which resume version performs best"
 - Show actionable recommendations for improving success rate
-- Display A/B testing dashboard with pre-populated test data
+- Display material comparison dashboard with pre-populated data
 - Show existing comparison: 12 applications with Version A, 11 with Version B
 - "Version A: 42% response rate, Version B: 27% response rate"
-- Display statistical significance calculation
+- Display simple percentage comparisons and charts
 - "Data-driven insights guide material optimization"
 
 ### 3.2 Application Quality Scoring and Scheduling (UC-122, UC-124)
@@ -245,7 +245,7 @@ Let's see how our fully deployed platform delivers a production-ready career adv
 
 **Content Preparation:**
 - [ ] Sample job applications with realistic data
-- [ ] Multiple resume versions for A/B testing
+- [ ] Multiple resume versions for comparison tracking
 - [ ] Job offers with complete compensation details
 - [ ] Interview responses in library
 - [ ] Salary growth calculator scenarios with different offers
